@@ -1540,6 +1540,11 @@
     protobufjs "^6.10.0"
     yargs "^16.2.0"
 
+"@headlessui/react@^1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.6.1.tgz#d822792e589aac005462491dd62f86095e0c3bef"
+  integrity sha512-gMd6uIs1U4Oz718Z5gFoV0o/vD43/4zvbyiJN9Dt7PK9Ubxn+TmJwTmYwyNJc5KxxU1t0CmgTNgwZX9+4NjCnQ==
+
 "@heroicons/react@^1.0.6":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@heroicons/react/-/react-1.0.6.tgz#35dd26987228b39ef2316db3b1245c42eb19e324"
@@ -1821,11 +1826,12 @@
   resolved "https://registry.yarnpkg.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.3.tgz#0300943770e04231041a51bd39f0439b5c7ab4f0"
   integrity sha512-nkalE/f1RvRGChwBnEIoBfSEYOXnCRdleKuv6+lePbMDrMZXeDQnqak5XDOeBgrPPyPfAdcCu/B5z+v3VhplGg==
 
-"@minikind/core@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@minikind/core/-/core-1.1.2.tgz#e4921f4caf5e7d731d7c965234d7429d62d61c3a"
-  integrity sha512-oz6+8Do56/rR0Cxek66+H2GGfXuZyf2vSC7l06Vtz741HSI86KAcBRrZfkGxDzoE31A8gYHoFG8LMJcbQ/NbiQ==
+"@minikind/core@^1.2.7":
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/@minikind/core/-/core-1.2.7.tgz#0b106386ff7fc482f77ebf27354e3bcba41bef2e"
+  integrity sha512-0pAmD1wYekKKntkmQ0NkIZf6h44/VZCq0XZpD5fb8ymp0V836DslYmH5punXw4oRErg8wWbw6eMUvLSh0YYS7A==
   dependencies:
+    "@headlessui/react" "^1.6.1"
     "@heroicons/react" "^1.0.6"
 
 "@nodelib/fs.scandir@2.1.5":

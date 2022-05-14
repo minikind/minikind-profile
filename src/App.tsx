@@ -16,6 +16,7 @@ import {
 } from "firebase/auth";
 import { auth, db } from "./api/firebase";
 import { getDoc, doc, updateDoc } from "firebase/firestore";
+import { DISPLAY_NAME, USERS } from "./constants/db";
 
 function App() {
   const [isInitialized, setIsInitialized] = useState(false);
@@ -43,11 +44,11 @@ function App() {
   useEffect(() => {
     if (!authUser) return;
 
-    const userDoc = doc(db, "users", authUser.uid);
+    const userDoc = doc(db, USERS, authUser.uid);
     getDoc(userDoc).then((snapshot) => {
       if (!snapshot.exists()) return;
       const data = snapshot.data();
-      setDisplayName(data["display_name"] ?? "");
+      setDisplayName(data[DISPLAY_NAME] ?? "");
     });
   }, [authUser]);
 
@@ -66,8 +67,8 @@ function App() {
         return;
       }
       setLoading(true);
-      await updateDoc(doc(db, "users", authUser.uid), {
-        display_name: displayName,
+      await updateDoc(doc(db, USERS, authUser.uid), {
+        [DISPLAY_NAME]: displayName,
       });
       setLoading(false);
     } catch (e) {
